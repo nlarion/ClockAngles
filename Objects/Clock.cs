@@ -25,11 +25,10 @@ namespace ClockAngle
 
     public double ReturnMinutes()
     {
-      return Math.Round((double) _minutes / 2);
+      return Math.Ceiling((double) _minutes / 2);
     }
 
     public double ReturnDegrees()
-
     {
       return ReturnHours() + ReturnMinutes();
     }
