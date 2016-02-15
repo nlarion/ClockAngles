@@ -10,10 +10,10 @@ namespace ClockAngle
       Get["/"] = _ => {
         return View["index.cshtml"];
       };
-      Post["/"] = _ => {
-        var newQueen = new Queen(Request.Form["x1"], Request.Form["y1"]);
-        return View["index.cshtml",newQueen.CanAttack(Request.Form["x2"],Request.Form["y2"])];
-      };
+      // Post["/"] = _ => {
+      //   var newQueen = new Queen(Request.Form["x1"], Request.Form["y1"]);
+      //   return View["index.cshtml",newQueen.CanAttack(Request.Form["x2"],Request.Form["y2"])];
+      // };
     }
   }
 }

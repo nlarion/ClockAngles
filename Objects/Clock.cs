@@ -8,15 +8,30 @@ namespace ClockAngle
     private int _hours;
     private int _minutes;
 
-    public Queen(int hours, int minutes)
+    public Clock(int hours, int minutes)
     {
       _hours = hours;
       _minutes = minutes;
     }
 
-    public int ReturnDegrees()
+    public double ReturnHours()
     {
-      return false;
+      if (_hours == 12) {
+        return 0;
+      } else {
+        return _hours * 30;
+      }
+    }
+
+    public double ReturnMinutes()
+    {
+      return Math.Round((double) _minutes / 2);
+    }
+
+    public double ReturnDegrees()
+
+    {
+      return ReturnHours() + ReturnMinutes();
     }
   }
 }
